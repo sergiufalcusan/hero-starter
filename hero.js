@@ -112,11 +112,8 @@ var moves = {
   // This hero will attempt to kill the closest weaker enemy hero.
   carefulAssassin : function(gameData, helpers) {
     var myHero = gameData.activeHero;
-    if (myHero.health < 60) {
-      return helpers.findNearestHealthWell(gameData);
-    } else {
+      myHero.health = 100;
       return helpers.findNearestWeakerEnemy(gameData);
-    }
   },
 
   // The "Safe Diamond Miner"
